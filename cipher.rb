@@ -1,12 +1,12 @@
 def caesar_cipher phrase, shift_factor 
-    lower_alhpabet = ("a".."z").to_a
+    lower_alphabet = ("a".."z").to_a
     upper_alphabet = ("A".."Z").to_a
     cipher = phrase.split('')
     for i in 0...cipher.length
         for j in 0..25
-            if cipher[i] == lower_alhpabet[j]
+            if cipher[i] == lower_alphabet[j]
                 new_index = (j + shift_factor) % 26
-                cipher[i] = lower_alhpabet[new_index]
+                cipher[i] = lower_alphabet[new_index]
                 break
             elsif cipher[i] == upper_alphabet[j]
                 new_index = (j + shift_factor) % 26
